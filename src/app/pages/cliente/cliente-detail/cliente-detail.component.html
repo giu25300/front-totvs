@@ -1,0 +1,41 @@
+<div class="po-row" [formGroup]="formulario">
+    <div class="po-md-5">
+        <po-input
+        p-label="Nome"
+        name="nome"
+        p-required="true"
+        p-min-length="2"
+        p-max-length="100" [(ngModel)]="cliente.nome" [ngModelOptions]="{standalone: true}">
+      </po-input>
+    </div>
+  </div>
+  <div class="po-row">
+    <div class="po-md-5">
+        <po-input
+        p-label="Endereco"
+        name="endereco"
+        p-required="true"
+        p-min-length="2"
+        p-max-length="100"
+        [(ngModel)]="cliente.endereco" [ngModelOptions]="{standalone: true}"
+        placeholder="Digite o endereco">
+        </po-input>
+    </div>
+  </div>
+  <div class="po-row">
+  <div class="po-md-5">
+      <po-input
+      p-label="Bairro"
+      name="bairro"
+      p-required="true"
+      p-min-length="2"
+      p-max-length="100"
+      [(ngModel)]="cliente.bairro" [ngModelOptions]="{standalone: true}">
+      </po-input>
+  </div>
+</div>
+<div class="po-row">
+  <div class="po-sm-4">
+      <po-button p-label="Salvar" (p-click)="salvar()"></po-button>
+  </div>
+</div>
